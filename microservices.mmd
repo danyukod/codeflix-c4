@@ -1,9 +1,3 @@
-# codeflix-c4
-
-## Microservices Diagram
-
-### Mermaid
-```mermaid
 C4Context
     title "Codeflix: Projeto Prático do Curso Full Cycle"
 
@@ -43,7 +37,7 @@ C4Context
     Rel(backend_catalogo_admin, backend_catalogo_admin_database, "Interage com usando", "TCP")
     Rel(backend_catalogo_admin, bucket_videos_raw, "Faz upload do vídeo raw via", "HTTPS")
 
-    Rel(encoder, bucket_videos, "Faz upload do vídeo converted via", "HTTPS")
+    Rel(encoder, bucket_videos, "Faz upload do vídeo convertido via", "HTTPS")
     Rel(encoder, bucket_videos_raw, "Faz download do vídeo raw via", "HTTPS")
 
     Rel(encoder, backend_catalogo_admin, "Consome dados do vídeo recém-criado via", "RabbitMQ Fila videos.new")
@@ -60,4 +54,3 @@ C4Context
 
     Rel(assinatura, assinatura_postgres, "Interage com via", "Protocolo Postgres")
     Rel(assinatura, keycloak, "Interage com via", "HTTPS")
-```
